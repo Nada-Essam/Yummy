@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area</title>
+    <link rel="icon" href="./img/logo (1).png" type="image/x-icon">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <link href="./dist/output.css" rel="stylesheet">
+    <script src="./node_modules/axios/dist/axios.min.js"></script>
+</head>
+<body class="bg-black">
+      <!--loader-->
+      <div id="loader" class="fixed top-0 bottom-0 left-0 right-0 mx-auto my-auto flex justify-center items-center z-50">
+        <div class="lds-roller ">
+       <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+     </div>
+     </div>
+     
+     <div class="side-nav h-screen flex fixed  z-20 ">
+      <div class="nav-black bg-black  text-white flex flex-col justify-between  ">
+        <div>
+          <ul class="list-none text-lg space-y-5 m-10">
+            <li><a href="./Search.html" class=" text-white nav-link">Search</a></li>
+            <li><a href="./Category.html" class=" text-white nav-link">Categories</a></li>
+            <li><a href="./area.html" class=" text-white nav-link">Area</a></li>
+            <li><a href="./ingredients.html" class=" text-white nav-link">Ingredients</a></li>
+            <li><a href="./contact.html" class=" text-white nav-link">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="m-10">
+          <ul class="social-media text-white list-none  flex space-x-4 justify-start cursor-pointer">
+            <li><i class="fab fa-facebook text-lg"></i></li>
+            <li><i class="fab fa-twitter text-lg"></i></li>
+            <li><i class="fas fa-globe text-lg"></i></li>
+          </ul>
+          <p class=" text-white text-lg">Copyright Â© 2019 All Rights
+        Reserved.</p>
+        </div>
+      </div>
+      <div class=" nav-white bg-white flex flex-col justify-between">
+        <img src="/img/logo (1).png" class="mt-5 ml-2" alt="logo">
+        <i class="menu-toggle fa-solid fa-bars fa-rotate-270 fs-1 m-auto text-4xl " role="button"></i>
+        <i class="close fa-solid fa-xmark fs-1 m-auto text-4xl " role="button"></i>
+        <div class="flex flex-col m-7 text-xl " role="button"> 
+          <i class="fa-solid fa-globe"></i>
+          <i class="fa-solid fa-share-nodes mt-3" role="button"></i>
+      </div>
+      </div>
+
+    </div>
+
+      
+    <div class=" grid grid-cols-1 md:grid-cols-4  gap-9 py-14 px-28 " id="main">
+      
+    </div>
+      <script src="./area.js"></script>
+      </body>
+      </html>

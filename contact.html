@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="icon" href="/img/logo (1).png" type="image/x-icon">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <link href="./dist/output.css" rel="stylesheet">
+    <script src="./node_modules/axios/dist/axios.min.js"></script>
+</head>
+<body class="bg-black">
+  <div class="side-nav h-screen flex fixed  z-20 ">
+    <div class="nav-black bg-black  text-white flex flex-col justify-between  ">
+      <div>
+        <ul class="list-none text-lg space-y-5 m-10">
+          <li><a href="/Search.html" class=" text-white nav-link">Search</a></li>
+          <li><a href="/Category.html" class=" text-white nav-link">Categories</a></li>
+          <li><a href="/area.html" class=" text-white nav-link">Area</a></li>
+          <li><a href="/ingredients.html" class=" text-white nav-link">Ingredients</a></li>
+          <li><a href="/contact.html" class=" text-white nav-link">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="m-10">
+        <ul class="social-media text-white list-none  flex space-x-4 justify-start cursor-pointer">
+          <li><i class="fab fa-facebook text-lg"></i></li>
+          <li><i class="fab fa-twitter text-lg"></i></li>
+          <li><i class="fas fa-globe text-lg"></i></li>
+        </ul>
+        <p class=" text-white text-lg">Copyright Â© 2019 All Rights
+      Reserved.</p>
+      </div>
+    </div>
+    <div class=" nav-white bg-white flex flex-col justify-between">
+      <img src="/img/logo (1).png" class="mt-5 ml-2" alt="logo">
+      <i class="menu-toggle fa-solid fa-bars fa-rotate-270 fs-1 m-auto text-4xl " role="button"></i>
+      <i class="close fa-solid fa-xmark fs-1 m-auto text-4xl " role="button"></i>
+      <div class="flex flex-col m-7 text-xl " role="button"> 
+        <i class="fa-solid fa-globe"></i>
+        <i class="fa-solid fa-share-nodes mt-3" role="button"></i>
+    </div>
+    </div>
+
+  </div>
+      
+      <div class="flex justify-center items-center min-h-screen">
+        <div class=" flex flex-col md:grid md:grid-cols-2 gap-9 pt-7 px-4 md:px-28  sm:w-3/4  " id="main">
+          <div>
+            <input type="text" class=" border rounded-xl border-gray-400 p-2 text-lg text-white w-full focus:outline-none focus:border-blue-500 bg-transparent " id="NameInput" placeholder="Enter Your Name">
+            <div class="error bg-[#f8d7da] mt-3 border rounded-md py-4 text-center text-[#8d2f31]    ">Special characters and numbers not allowed</div>
+          </div>
+          <div>
+            <input type="email" class="border rounded-xl border-gray-400 p-2 text-lg text-white w-full focus:outline-none focus:border-blue-500 bg-transparent " id="EmailInput" placeholder="Enter Your Email">
+            <div  class="error bg-[#f8d7da] mt-3 border rounded-md py-4 text-center text-[#8d2f31]  ">Email not valid *exemple@yyy.zzz</div>
+          </div>
+          <div>
+            <input type="number" class="border rounded-xl border-gray-400 p-2 text-lg text-white w-full focus:outline-none focus:border-blue-500 bg-transparent " id="NumberInput" placeholder="Enter Your Phone">
+            <div  class="error bg-[#f8d7da] mt-3 border rounded-md py-4 text-center text-[#8d2f31]  ">Enter valid Phone Number</div>
+          </div>
+          <div>
+            <input type="number" class="border rounded-xl border-gray-400 p-2 text-lg text-white w-full focus:outline-none focus:border-blue-500 bg-transparent " id="AgeInput" placeholder="Enter Your Age">
+            <div  class="error bg-[#f8d7da] mt-3 border rounded-md py-4 text-center text-[#8d2f31] ">Enter valid age </div>
+          </div>
+          <div>
+            <input type="password" class="border rounded-xl border-gray-400 p-2 text-lg text-white w-full focus:outline-none focus:border-blue-500 bg-transparent " id="PasswordInput" placeholder="Enter Your Password">
+            <div  class="error bg-[#f8d7da] mt-3 border rounded-md py-4 text-center text-[#8d2f31]  ">Enter valid password *Minimum eight characters, at least one letter and one number:*</div>
+          </div>
+          <div>
+            <input type="password" class="border rounded-xl border-gray-400 p-2 text-lg text-white w-full focus:outline-none focus:border-blue-500 bg-transparent " id="RepasswordInput" placeholder="Repassword">
+            <div  class="error bg-[#f8d7da] mt-3 border rounded-md py-4 text-center text-[#8d2f31]  ">Enter valid repassword</div>
+          </div>
+          <button class="disabled col-span-2  mx-auto bg-transparent px-2 py-2 border border-red-500 rounded-lg text-red-500 text-lg "  id="btn" role="button" disabled>Submit</button>
+
+        </div>
+      </div>
+      <script src="./contact.js"></script>
+</body>
+</html>
