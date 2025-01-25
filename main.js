@@ -45,7 +45,7 @@ getmeals();
 
 
 function ShowDetails(id) {
-    window.location = `/details.html?id=${id}`;
+    window.location = /Yummy/details.html?id=${id}; 
 }
 
 function toggleLoader(show=true){
