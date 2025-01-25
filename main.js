@@ -45,7 +45,6 @@ getmeals();
 
 
 function ShowDetails(id) {
-    console.log(id)
     window.location = `/Yummy/Details.html?id=${id}`; 
 }
 
