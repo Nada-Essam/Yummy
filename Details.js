@@ -18,20 +18,15 @@ const searchparam = location.search;
 const param = new URLSearchParams(searchparam);
 const id = param.get("id");
 
-if (!id) {
-  console.error("ID not found in the URL");
-  return;
-}
-
 function getMealDetails(id) {
   let content = "";
   toggleLoader(true)
-  axios.get(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`)
+  axios.get(https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id})
     .then((res) => {
       toggleLoader(false)
       const meal = res.data.meals[0]; // تخزين بيانات الوجبة لتسهيل الوصول إليها
       
-      content += `
+      content += 
         <div class="image basis-full md:basis-1/3 ml-28">
           <img src="${meal.strMealThumb}" class="rounded-2xl" alt="">
           <h2 class="text-white font-bold text-2xl">${meal.strMeal}</h2>
@@ -44,20 +39,20 @@ function getMealDetails(id) {
           <h2 class="font-semibold text-3xl" style="margin-top:20px">Category: ${meal.strCategory}</h2>
           <h3 class="font-semibold text-3xl" style="margin-top:20px">Recipes:</h3>
           <div id="recipe" class="mt-6">
-      `;
+      ;
 
-      // إضافة المكونات داخل `#recipe`
+      // إضافة المكونات داخل #recipe
       for (let i = 1; i <= 20; i++) {
-        const ingredient = meal[`strIngredient${i}`];
-        const measure = meal[`strMeasure${i}`];
+        const ingredient = meal[strIngredient${i}];
+        const measure = meal[strMeasure${i}];
 
         if (ingredient) { // تأكد من وجود المكون قبل إضافته
-          content += `<p class="recipes text-md ml-2 inline-block ">${measure} ${ingredient}</p>`;
+          content += <p class="recipes text-md ml-2 inline-block ">${measure} ${ingredient}</p>;
         }
       }
 
       // إغلاق div#recipe بعد الانتهاء من حلقة المكونات
-      content += `
+      content += 
           </div> 
           <h3 class="font-semibold text-3xl" style="margin-top:20px">Tags:</h3>
           <button type="button" class="mt-5 bg-green-500 hover:bg-green-700 font-semibold text-xl py-2 px-4 rounded-lg text-white">
@@ -67,7 +62,7 @@ function getMealDetails(id) {
             <a href='${meal.strYoutube}' class='text-white'>YouTube</a>
           </button>
         </div>
-      `;
+      ;
 
       // عرض المحتوى النهائي داخل عنصر الصفحة
       document.getElementById("Details").innerHTML = content;
@@ -78,10 +73,9 @@ function getMealDetails(id) {
 getMealDetails(id);
 
 function toggleLoader(show=true){
-  const loader = document.getElementById("loader");
-  if (show) {
-    loader.style.visibility = 'visible';
-  } else {
-    loader.style.visibility = 'hidden';
+  if(show){
+    document.getElementById("loader").style.visibility='visible'
+  }else{
+    document.getElementById("loader").style.visibility='hidden'
   }
 }
