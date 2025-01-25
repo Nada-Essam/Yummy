@@ -18,6 +18,11 @@ const searchparam = location.search;
 const param = new URLSearchParams(searchparam);
 const id = param.get("id");
 
+if (!id) {
+  console.error("ID not found in the URL");
+  return;
+}
+
 function getMealDetails(id) {
   let content = "";
   toggleLoader(true)
@@ -73,10 +78,10 @@ function getMealDetails(id) {
 getMealDetails(id);
 
 function toggleLoader(show=true){
-  if(show){
-    document.getElementById("loader").style.visibility='visible'
-  }else{
-    document.getElementById("loader").style.visibility='hidden'
+  const loader = document.getElementById("loader");
+  if (show) {
+    loader.style.visibility = 'visible';
+  } else {
+    loader.style.visibility = 'hidden';
   }
 }
-
