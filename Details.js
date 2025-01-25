@@ -38,21 +38,22 @@ function getMealDetails(id) {
           <h2 class="font-semibold text-3xl" style="margin-top:20px">Area: ${meal.strArea}</h2>
           <h2 class="font-semibold text-3xl" style="margin-top:20px">Category: ${meal.strCategory}</h2>
           <h3 class="font-semibold text-3xl" style="margin-top:20px">Recipes:</h3>
-          <div id="recipe" class="mt-6">`
-      ;
+          <div id="recipe" class="mt-6">
+      `;
 
       // إضافة المكونات داخل #recipe
-      for (let i = 1; i <= 20; i++) {
-        const ingredient = meal[strIngredient${i}];
-        const measure = meal[strMeasure${i}];
+    for (let i = 1; i <= 20; i++) {
+  const ingredient = meal[`strIngredient${i}`];
+  const measure = meal[`strMeasure${i}`];
 
-        if (ingredient) { // تأكد من وجود المكون قبل إضافته
-          content += <p class="recipes text-md ml-2 inline-block ">${measure} ${ingredient}</p>;
-        }
-      }
+  if (ingredient) { 
+    content += `<p class="recipes text-md ml-2 inline-block">${measure} ${ingredient}</p>`;
+  }
+}
+
 
       // إغلاق div#recipe بعد الانتهاء من حلقة المكونات
-      content += 
+      content += `
           </div> 
           <h3 class="font-semibold text-3xl" style="margin-top:20px">Tags:</h3>
           <button type="button" class="mt-5 bg-green-500 hover:bg-green-700 font-semibold text-xl py-2 px-4 rounded-lg text-white">
@@ -62,7 +63,7 @@ function getMealDetails(id) {
             <a href='${meal.strYoutube}' class='text-white'>YouTube</a>
           </button>
         </div>
-      ;
+      `;
 
       // عرض المحتوى النهائي داخل عنصر الصفحة
       document.getElementById("Details").innerHTML = content;
