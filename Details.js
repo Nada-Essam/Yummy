@@ -23,6 +23,7 @@ function getMealDetails(id) {
   toggleLoader(true)
   axios.get(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`)
     .then((res) => {
+      console.log(res.data);
       toggleLoader(false)
       const meal = res.data.meals[0]; // تخزين بيانات الوجبة لتسهيل الوصول إليها
       
