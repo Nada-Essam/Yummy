@@ -26,7 +26,7 @@ function getMealDetails(id) {
       toggleLoader(false)
       const meal = res.data.meals[0]; // تخزين بيانات الوجبة لتسهيل الوصول إليها
       
-      content += 
+      content += `
         <div class="image basis-full md:basis-1/3 ml-28">
           <img src="${meal.strMealThumb}" class="rounded-2xl" alt="">
           <h2 class="text-white font-bold text-2xl">${meal.strMeal}</h2>
@@ -38,7 +38,7 @@ function getMealDetails(id) {
           <h2 class="font-semibold text-3xl" style="margin-top:20px">Area: ${meal.strArea}</h2>
           <h2 class="font-semibold text-3xl" style="margin-top:20px">Category: ${meal.strCategory}</h2>
           <h3 class="font-semibold text-3xl" style="margin-top:20px">Recipes:</h3>
-          <div id="recipe" class="mt-6">
+          <div id="recipe" class="mt-6">`
       ;
 
       // إضافة المكونات داخل #recipe
