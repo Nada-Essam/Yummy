@@ -61,7 +61,7 @@ document.getElementById("main").innerHTML = cartona;
     }
 
 function ShowDetails(id) {
-  window.location = `/details.html?id=${id}`;
+  window.location = `/Yummy/Details.html?id=${id}`;
 }
 
 function toggleLoader(show=true){
