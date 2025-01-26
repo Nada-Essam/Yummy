@@ -62,7 +62,7 @@ function getAreaMeals(area) {
 }
 
 function ShowDetails(id) {
-    window.location = `/details.html?id=${id}`;
+    window.location = `/Details.html?id=${id}`;
   }
   function toggleLoader(show=true){
     if(show){
