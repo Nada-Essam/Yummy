@@ -33,7 +33,7 @@ function getMealDetails(id) {
           <h2 class="text-white font-bold text-2xl">${meal.strMeal}</h2>
         </div>
 
-        <div class="info basis-full md:basis-2/3 text-white pt-3">
+        <div class="info basis-full md:basis-2/3 ml-28 text-white pt-3">
           <h2 class="font-semibold text-3xl" style="margin-bottom:10px">Instructions</h2>
           <p class="text-md mr-6">${meal.strInstructions}</p>
           <h2 class="font-semibold text-3xl" style="margin-top:20px">Area: ${meal.strArea}</h2>
