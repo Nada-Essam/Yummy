@@ -76,7 +76,7 @@ searchinput.addEventListener("keyup",()=>{
   })
 })
 function ShowDetails(id) {
-  window.location = `/Yummy/details.html?id=${id}`;
+  window.location = `/Yummy/Details.html?id=${id}`;
 }
 function toggleLoader(show=true){
   if(show){
