@@ -59,7 +59,7 @@ function getIngredientsMeals(ingredient){
 
 }
 function ShowDetails(id) {
-    window.location = `/Details.html?id=${id}`;
+    window.location = `/Yummy/Details.html?id=${id}`;
   }
 
   function toggleLoader(show=true){
